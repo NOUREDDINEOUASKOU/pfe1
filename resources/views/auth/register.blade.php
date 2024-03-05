@@ -2,13 +2,14 @@
 
 @section('content')
 <style>
-    body{
+  body{
         background: rgb(104,98,233);
-background: -moz-linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
-background: linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6862e9",endColorstr="#00fffc",GradientType=1);
+        background: -moz-linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
+        background: linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6862e9",endColorstr="#00fffc",GradientType=1);
     }
+    /* add this style for text and form elements */
 </style>
 <div class="container">
     <div class="row justify-content-center">

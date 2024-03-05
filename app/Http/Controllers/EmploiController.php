@@ -45,7 +45,7 @@ class EmploiController extends Controller
                            ');
 
 
-        return view('admin.test', compact('desponibilites'));
+        return view('admin.test', compact('desponibilites','user'));
     }
 }
 

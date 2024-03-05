@@ -24,7 +24,8 @@
     </style>
 </head>
 <body>
-<h1 style="text-align: center;">Emploi de temps pour SMI S6 :</h1>
+<h1 style="text-align: center;">Emploi de temps pour {{$user->name}} :</h1>
+
 </body>
 </html>
 <?php
@@ -46,7 +47,13 @@ foreach ($jours as $jour) {
 echo '</tr>';
 foreach ($heures as $heure) {
     echo '<tr>';
-    echo "<th>$heure</th>";
+    echo "<th>";
+        if($heure=="t8_10") echo "08h--10h";
+        if($heure=="t10_12") echo "10h--12h";
+        if($heure=="t14_16") echo "14h--16h";
+        if($heure=="t16_18") echo "16h--18h";
+    echo"</th>";
+
     foreach ($jours as $jour) {
         $find = false;
         foreach ($desponibilites as $dispo) {

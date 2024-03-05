@@ -16,16 +16,17 @@
     <script src="{{ asset('frontend/js/bootstrap5.bundle.min.js') }}"></script>
     <title>Formulaire de salle</title>
 </head>
-<body style="background:linear-gradient(to bottom, #87CEFA, #1E90FF); ">
+<body>
     <style>
 body{
-    font: italic small-caps bold 16px/2 cursive;
-        margin: 0;
-        padding: 0;
-        background-image: url(ad.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color:
+
+        background: rgb(104,98,233);
+        background: -moz-linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
+        background: linear-gradient(90deg, rgba(104,98,233,1) 0%, rgba(21,115,134,1) 32%, rgba(51,175,144,1) 82%, rgba(0,255,252,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6862e9",endColorstr="#00fffc",GradientType=1);
+
+
 }
 input[type="button"] {
             background-color: #ccc;
@@ -48,7 +49,17 @@ input[type="submit"], input[type="button"] {
             margin-bottom: 10px;
         }
 .container{
+    width: 40%;
     text-align: center;
+    margin-top: 1%;
+            margin-right: 20%;
+            margin-left: 30%;
+            background-color: #cac4c4;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+            font-size:x-large;
 }
 .container h2{
     font-size: 2vw;
@@ -173,17 +184,6 @@ form select{
 </body>
 
 <style>
- form {
-            margin-top: 1%;
-            margin-right: 20%;
-            margin-left: 20%;
-            background-color: #cac4c4;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgb(0, 0, 0);
-            font-size:x-large;
-        }
   table {
   border-collapse: collapse;
   width: 80%;
@@ -194,12 +194,15 @@ form select{
 th, td {
   border: 1px solid black;
   padding: 8px;
-  text-align: center;
+  text-align: left;
 }
 
 th {
   background-color: gray;
   color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 h1{
     text-align: center;
@@ -218,6 +221,18 @@ button.favorite.styled {
             margin-top: 1%;
             margin-bottom: 10px;
             margin-left: 48%;
+}
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
 }
 </style>
 <br><br>

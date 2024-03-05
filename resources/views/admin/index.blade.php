@@ -11,68 +11,105 @@
       <head>
         <title>
     <title>Formulaire de réservation :</title>
-    <style>
+
+</head>
+<style>
+    /* General styling */
 body {
-    font: italic small-caps bold 16px/2 cursive;
-        margin: 0;
-        padding: 0;
-        background-image: url(ad.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-        h1 {
-            color: rgb(3, 3, 37);
-            text-align: center;
-            font-size: 36px;
-        }
-        form {
-            margin-right: 3%;
-          margin-left: 3%;
-            background-color: #cac4c4;
-            padding: 4%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgb(0, 0, 0);
-            font-size:x-large;
-        }
-        .styled {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgb(0, 255, 55);
-    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
 }
 
-.styled:hover {
-    background-color: rgb(193, 205, 216);
+h1 {
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-.styled:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-th, td {
-  border: 1px solid black;
+td, th {
   padding: 8px;
+  border: 1px solid #ccc;
   text-align: center;
 }
 
 th {
-  background-color: rgb(129, 118, 118);
-  color: white;
+  background-color: #343a40;
+  color: #fff;
 }
-    </style>
-</head>
+
+/* Button styling */
+.favorite.styled {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.favorite.styled:hover {
+  background-color: #0069d9;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Form styling */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+form button {
+  margin-top: 10px;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  form {
+    font-size: 14px;
+  }
+}
+.favorite.styled a {
+  color: #fff;
+}
+</style>
 <body>
 
     <form action="traitement.php" method="post">

@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
-
 @section('content')
-    <div class="container">
+    <div class="container" style="background-color: #f2f2f2;">
         @if(session('success'))
-            <div class="text-success p-3 text-center w-100">
+            <div class="alert alert-success">
                 {{ session('success') }}
             </div>
         @endif
 
-        <table>
-            <thead>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
                 <th>jour</th>
                 <th>horaire</th>
                 <th>action</th>
@@ -32,9 +31,9 @@
                         <td>{{ $dispo->jour }}</td>
                         <td>
                             {{ $dispo->t8_10?  '8-10':'' }}
-                            {{ $dispo->t10_12? ' | 10-12':'' }}
-                            {{ $dispo->t14_16? ' 14-16':'' }}
-                            {{ $dispo->t16_18? ' | 16-18':'' }}
+                            {{ $dispo->t10_12? '10-12':'' }}
+                            {{ $dispo->t14_16? '14-16':'' }}
+                            {{ $dispo->t16_18? '16-18':'' }}
                         </td>
 
                         <td>
@@ -42,13 +41,13 @@
                                 @csrf
                                 <label>
                                     <input type="hidden" value="{{$dispo->id}}" name="dispo">
-                                    <select name="classe" >
-                                        <option value="null">sélectionnez votre classe</option>
+                                    <select name="classe" class="form-control">
+                                        <option value="null">Sélectionnez votre classe</option>
                                         @foreach( $professeur as $prof )
                                             <option
                                                 value="{{ $prof->id }}"
                                                 @if($dispo->professeur_id == $prof->id)
-                                                    {{'Selected'}}
+                                                    {{'selected'}}
                                                 @endif
                                             >
                                                 {{ $prof->fillier .' | '. $prof->semestre.' | ' . $prof->module }}
@@ -56,8 +55,8 @@
                                         @endforeach
                                     </select>
                                 </label>
-                                <button>
-                                    valider
+                                <button type="submit" class="btn btn-primary">
+                                    Valider
                                 </button>
                             </form>
                         </td>
@@ -67,10 +66,19 @@
         </table>
 
         @if($allHasProfId)
-            <a href="{{ route('emploi.generate') }}">
-                <button>Generate Emploi</button>
-            </a>
+            <a href="{{ route('emploi.generate') }}" class="btn btn-success">Generate Emploi</a>
         @endif
 
     </div>
+@endsection
+
+@section('styles')
+    <style>
+        th {
+            text-align: center;
+        }
+        .alert {
+            margin-bottom: 20px;
+        }
+    </style>
 @endsection
