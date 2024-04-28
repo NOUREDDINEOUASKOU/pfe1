@@ -35,7 +35,7 @@
           ou les technologies. Son objet est donc de <br>
           rapprocher au mieux les besoins et les ressources en professionnelles
     </p>
-    <h2>Informations sur l'application</h2>
+    <h2 class="text text-primary text-center">Informations sur l'application</h2>
     <ul id="NV">
       <li>Nom de l'application : Gestion des emplois du temps d'une faculte</li>
       <li>Version : 1.0</li>
